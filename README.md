@@ -57,3 +57,6 @@ class SignupForm(UserCreationForm):
         }
     ))
 ```
+
+# Registro de usuario en views.py
+
