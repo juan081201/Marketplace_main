@@ -1,6 +1,6 @@
 {% extends 'store/base.html' %}
 
-{% block title %}Registro | {% endblock %}
+{% block title %}Registro| {% endblock %}
 
 {% block content %}
 <div class="row p-4 d-flex justify-content-center align-items-center">
@@ -11,36 +11,39 @@
             {% csrf_token %}
             <div class="form-floating mb-3">
                 <h6>Username:</h6>
-                {{ form.username }}
+                {{form.username}}
             </div>
             <div class="form-floating mb-3">
                 <h6>Email:</h6>
-                {{ form.email }}
+                {{form.email}}
             </div>
             <div class="form-floating mb-3">
                 <h6>Password:</h6>
-                {{ form.password1 }}
+                {{form.password1}}
             </div>
             <div class="form-floating mb-3">
                 <h6>Repite Password:</h6>
-                {{ form.password2 }}
+                {{form.password2}}
             </div>
 
             {% if form.errors or form.non_field_errors %}
-                <div class="mb-4 p-6 bg-danger">
+                <div class="mb-4 p-6 bg-danger rounded">
                     {% for field in form %}
-                        {{field.errors}}
+                        <h5 class="text-white">
+                            {{field.errors}}
+                        </h5>
+                        
                     {% endfor %}
-
                     {{ form.non_field_errors }}
                 </div>
             {% endif %}
-            <div class="div-flex justify-content-center align-items-center">
-                <button class="btn btn-primary mb-6">register</button>
+
+            <div class="d-flex justify-content-center align-items-center">
+                <button class="btn btn-primary mb-6">Register</button>
             </div>
             <div class="d-flex justify-content-center align-items-center">
-                <button class="{% url 'login' %}">¿Ya tienes cuenta? Accesa aqui</button>
-            </div> 
+                <a href="{% url 'login' %}">¿Ya tienes cuenta? Accesa aqui!</a>
+            </div>
         </form>
     </div>
 </div>
