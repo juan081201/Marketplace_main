@@ -1,10 +1,18 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
+<<<<<<< HEAD
 from django.contrib.auth.decorators import login_required
 from .models import Item, Category
 
 from .forms import SignupForm, NewItemForm
  
+=======
+
+from .models import Item, Category
+
+from .forms import SignupForm, NewItemForm
+>>>>>>> 02c616b2ffaa34c481adc325e929f0ae3b80dfb9
 
 # Create your views here.
 def home(request):
@@ -25,8 +33,12 @@ def contact(request):
 
 def detail(request, pk):
     item = get_object_or_404(Item, pk=pk)
+<<<<<<< HEAD
     related_items = Item.objects.filter(Category=item.Category, is_sold=False).exclude(pk=pk)[0:3]
 
+=======
+    related_items = Item.objects.filter(category=item.category, is_sold=False).exclude(pk=pk)[0:3]
+>>>>>>> 02c616b2ffaa34c481adc325e929f0ae3b80dfb9
     context={
         'item': item,
         'related_items': related_items
@@ -43,7 +55,7 @@ def register(request):
             return redirect('login')
     else:
         form = SignupForm()
-    
+
     context = {
         'form': form
     }
@@ -55,7 +67,10 @@ def logout_user(request):
 
     return redirect('home')
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 02c616b2ffaa34c481adc325e929f0ae3b80dfb9
 @login_required
 def add_item(request):
     if request.method == 'POST':
@@ -73,5 +88,9 @@ def add_item(request):
             'form': form,
             'title': 'New Item'
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 02c616b2ffaa34c481adc325e929f0ae3b80dfb9
     return render(request, 'store/form.html', context)
