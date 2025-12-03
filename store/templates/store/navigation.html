@@ -16,22 +16,25 @@
                         Contact
                     </a>
                 </li>
-            {% if request.user.if_authenticated %}
+               
+                {% if request.user.is_authenticated %}
                 <li class="nav-item">
-                    <a href="{% url 'logout' %}" class="nav-link">logout</a>
+                    <a href="{% url 'logout' %}" class="nav-link active">
+                        Logout
+                    </a>
                 </li>
-            {% else %}
+                {% else %}
                 <li class="nav-item">
                     <a href="{% url 'login' %}" class="nav-link active">
-                    login
+                        Login
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'register' %}" class="nav-link active">
-                    register
-                   </a>
-                </li> 
-            {% else %}
+                        Register
+                    </a>
+                </li>
+                {% endif %}
             </ul>
         </div>
     </div>

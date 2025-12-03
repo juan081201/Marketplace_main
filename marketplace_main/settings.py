@@ -26,6 +26,9 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = [
+    ' https://gearldine-bacteriostatic-trenchantly.ngrok-free.dev',
+]
 
 LOGIN_URL ='/store/login/'
 LOGIN_REDIRECT_URL = '/'
