@@ -25,10 +25,18 @@ SECRET_KEY = 'django-insecure-(ydc-ev9@h4ofb*t!2xw765e3s_bzk4v2sdk3qa5dp&f*ibtbu
 DEBUG = True
 
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = []
 CSRF_TRUSTED_ORIGINS = [
     ' https://gearldine-bacteriostatic-trenchantly.ngrok-free.dev',
 ]
+=======
+ALLOWED_HOSTS = ['127.0.0.1','gearldine-bacteriostatic-trenchantly.ngrok-free.dev']
+CSRF_TRUSTED_ORIGINS = [
+    'https://gearldine-bacteriostatic-trenchantly.ngrok-free.dev',
+]
+
+>>>>>>> cafb8291092cf80568e4e4fad28f361b900fb328
 
 LOGIN_URL ='/store/login/'
 LOGIN_REDIRECT_URL = '/'

@@ -18,6 +18,10 @@
                 </li>
                
                 {% if request.user.is_authenticated %}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cafb8291092cf80568e4e4fad28f361b900fb328
                 <li class="nav-item">
                     <a href="{% url 'logout' %}" class="nav-link active">
                         Logout
@@ -34,6 +38,30 @@
                         Register
                     </a>
                 </li>
+<<<<<<< HEAD
+=======
+=======
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'add_item'%}">Add Item</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'logout' %}" class="nav-link active">
+                            Logout
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a href="{% url 'login' %}" class="nav-link active">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'register' %}" class="nav-link active">
+                            Register
+                        </a>
+                    </li>
+>>>>>>> 02c616b2ffaa34c481adc325e929f0ae3b80dfb9
+>>>>>>> cafb8291092cf80568e4e4fad28f361b900fb328
                 {% endif %}
             </ul>
         </div>

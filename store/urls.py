@@ -1,6 +1,12 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 02c616b2ffaa34c481adc325e929f0ae3b80dfb9
+>>>>>>> cafb8291092cf80568e4e4fad28f361b900fb328
 from .views import contact, detail, register, logout_user, add_item
 
 from .forms import LoginForm

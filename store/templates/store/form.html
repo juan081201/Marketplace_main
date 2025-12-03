@@ -1,5 +1,9 @@
 {% extends 'store/base.html' %}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cafb8291092cf80568e4e4fad28f361b900fb328
 {% block title %}{{ title }} | {% endblock %}
 
 {% block content %}
@@ -19,10 +23,35 @@
                         {{field.errors}}
                     </h5>
 
+<<<<<<< HEAD
+=======
+=======
+{% block title %} {{ title }} {% endblock %}
+
+{% block content%}
+    <h4 class="mb-4 mt-4">{{ title }}</h4>
+    <hr>
+    <form action="." method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+        
+            {{ form.as_p }}
+        </div>
+
+        {% if form.errors or form.non_field_errors %}
+            <div class="mb-4 p-6 bg-danger">
+                {% for field in form %}
+                    {{ field.errors }}
+>>>>>>> 02c616b2ffaa34c481adc325e929f0ae3b80dfb9
+>>>>>>> cafb8291092cf80568e4e4fad28f361b900fb328
                 {% endfor %}
 
                 {{ form.non_field_errors }}
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cafb8291092cf80568e4e4fad28f361b900fb328
     {% endif %}
 
     <button class = "btn btn-primary mb-6">
@@ -30,4 +59,15 @@
     </button>
 </form>
 
+<<<<<<< HEAD
 {% endblock %}
+=======
+{% endblock %}
+=======
+        {% endif %}
+
+        <button class="btn btn-primary mb-6">Register</button>
+    </form>
+{% endblock%}
+>>>>>>> 02c616b2ffaa34c481adc325e929f0ae3b80dfb9
+>>>>>>> cafb8291092cf80568e4e4fad28f361b900fb328
